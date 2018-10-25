@@ -1,0 +1,1 @@
+{"env_name": "LunarLanderContinuous-v2", "exp_name": "ll_b40000_r0.005", "render": false, "discount": 0.99, "n_iter": 100, "batch_size": 40000, "max_timesteps": 1000.0, "learning_rate": 0.005, "reward_to_go": true, "dont_normalize_advantages": false, "seed": 1, "n_experiments": 3, "hidden_layers": 2, "hidden_nodes": 64, "act_function": "tanh", "nn_baseline": true}

@@ -1,0 +1,17 @@
+python pg_train.py LunarLanderContinuous-v2 -ep 1000 --discount 0.99 -n 100 -e 3 -l 2 -s 64 -b 40000 -lr 0.005 -rtg --nn_baseline --exp_name ll_b40000_r0.005
+
+python plot.py data/ll_b40000_r0.005_LunarLanderContinuous-v2  --value AverageReturn
+
+
+for (( i=0; i <$maxb; i=i+1)) do
+ for (( j=0; j <$maxlr; j=j+1)) do
+   python pg_train.py InvertedPendulum-v2 -ep 1000 --discount 0.9 -n 100 -e 3 -l 2 -s 64 -b ${ar_b[$i]} -lr ${ar_lr[$j]} -rtg --exp_name hc_b${ar_b[$i]}_${ar_lr[$j]}
+ done
+done
+
+
+python plot.py data/hc_b10000_r0.01_HalfCheetah-v2 data/hc_b10000_r0.02_HalfCheetah-v2 data/hc_b10000_r0.0005_HalfCheetah-v2  --value AverageReturn
+
+python plot.py data/hc_b30000_r0.01_HalfCheetah-v2 data/hc_b30000_r0.02_HalfCheetah-v2 data/hc_b30000_r0.0005_HalfCheetah-v2  --value AverageReturn
+
+python plot.py data/hc_b50000_r0.01_HalfCheetah-v2 data/hc_b50000_r0.02_HalfCheetah-v2 data/hc_b50000_r0.0005_HalfCheetah-v2  --value AverageReturn

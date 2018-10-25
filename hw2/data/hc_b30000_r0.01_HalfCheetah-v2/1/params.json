@@ -1,0 +1,1 @@
+{"exp_name": "hc_b30000_r0.01", "batch_size": 30000, "dont_normalize_advantages": false, "n_iter": 100, "seed": 1, "act_function": "tanh", "env_name": "HalfCheetah-v2", "hidden_nodes": 32, "render": false, "nn_baseline": true, "n_experiments": 3, "max_timesteps": 150.0, "hidden_layers": 2, "learning_rate": 0.01, "reward_to_go": true, "discount": 0.9}

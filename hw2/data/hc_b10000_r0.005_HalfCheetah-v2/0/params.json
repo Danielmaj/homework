@@ -1,0 +1,1 @@
+{"env_name": "HalfCheetah-v2", "exp_name": "hc_b10000_r0.005", "seed": 1, "learning_rate": 0.005, "max_timesteps": 150.0, "discount": 0.9, "hidden_nodes": 32, "render": false, "batch_size": 10000, "hidden_layers": 2, "dont_normalize_advantages": false, "n_experiments": 3, "nn_baseline": true, "n_iter": 100, "act_function": "tanh", "reward_to_go": true}
